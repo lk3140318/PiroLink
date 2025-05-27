@@ -1,0 +1,82 @@
+/*
+ Theme Name: FileShare
+ Theme URI: https://example.com/fileshare
+ Author: xAI Developer
+ Author URI: https://x.ai
+ Description: A modern, responsive WordPress theme for file sharing and downloading.
+ Version: 1.0.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain: fileshare
+ Tags: file-sharing, responsive, modern, seo
+*/
+
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --primary: #1e40af;
+  --background: #f9fafb;
+  --text: #1f2937;
+  --accent: #e5e7eb;
+}
+
+[data-theme="dark"] {
+  --primary: #60a5fa;
+  --background: #1f2937;
+  --text: #f9fafb;
+  --accent: #374151;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+.hero-section {
+  background: linear-gradient(to right, var(--primary), #3b82f6);
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.upload-btn {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  transition: background-color 0.3s ease;
+}
+
+.upload-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.file-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.file-card {
+  background: var(--accent);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .file-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
